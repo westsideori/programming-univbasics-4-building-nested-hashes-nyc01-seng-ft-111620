@@ -3,8 +3,9 @@ def base_hash
 end
 
 def monopoly_with_second_tier
-  Hash.new({railroads: {}})
-  [:railroads][:pieces] = 4
+  hash = Hash.new({railroads: {}})
+  hash[:railroads] = :pieces
+  hash[:railroads][:pieces] = 4
   [:railroads][:rent_in_dollars] = {}
   [:railroads][:names] = {}
 end
